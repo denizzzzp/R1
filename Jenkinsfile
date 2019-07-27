@@ -12,13 +12,13 @@ node {
             dir("projekt") {
                 sh "pwd"
                 }
-            sh 'docker build -t denizzzzp/R1:$DOCKER_TAGS .'
+            sh 'docker build -t denizzzzp/r1:$DOCKER_TAGS .'
         }
         stage('Docker hub login') {
             sh 'docker login -u $DOCKER_LOGIN -p $DOCKER_PASS'
         }
         stage('Docker push') {
-            sh 'docker push denizzzzp/R1:$DOCKER_TAGS'
+            sh 'docker push denizzzzp/r1:$DOCKER_TAGS'
         }
     } catch (e) {
         sh 'exit 1'
