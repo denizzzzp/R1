@@ -115,7 +115,7 @@ def seedJobXml = """<?xml version='1.0' encoding='UTF-8'?>
     <configVersion>2</configVersion>
     <userRemoteConfigs>
       <hudson.plugins.git.UserRemoteConfig>
-        <url>https://github.com/denizzzzp/dev-deay2.git</url>
+        <url>https://github.com/denizzzzp/R1.git</url>
       </hudson.plugins.git.UserRemoteConfig>
     </userRemoteConfigs>
     <branches>
@@ -135,7 +135,7 @@ def seedJobXml = """<?xml version='1.0' encoding='UTF-8'?>
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <javaposse.jobdsl.plugin.ExecuteDslScripts plugin="job-dsl@1.52">
-      <targets>DAY4-DZ/jobs/*.groovy</targets>
+      <targets>jobs/*.groovy</targets>
       <usingScriptText>false</usingScriptText>
       <ignoreExisting>false</ignoreExisting>
       <ignoreMissingFiles>false</ignoreMissingFiles>

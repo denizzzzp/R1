@@ -5,17 +5,20 @@ node {
         notifyBuild()
         stage('Checkout') {
             git branch: 'master',
-                url: 'https://github.com/denizzzzp/DAY2-DZ2.git'
+                url: 'https://github.com/denizzzzp/R1.git'
 
         }
         stage('Docker build') {
-            sh 'docker build -t denizzzzp/day2-dz2:$DOCKER_TAGS .'
+            dir("projekt") {
+                sh "pwd"
+                }
+            sh 'docker build -t denizzzzp/R1:$DOCKER_TAGS .'
         }
         stage('Docker hub login') {
             sh 'docker login -u $DOCKER_LOGIN -p $DOCKER_PASS'
         }
         stage('Docker push') {
-            sh 'docker push denizzzzp/day2-dz2:$DOCKER_TAGS'
+            sh 'docker push denizzzzp/R1:$DOCKER_TAGS'
         }
     } catch (e) {
         sh 'exit 1'

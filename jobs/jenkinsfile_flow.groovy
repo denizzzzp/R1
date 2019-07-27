@@ -16,12 +16,12 @@ pipelineJob("my-first-pipeline") {
             scm {
                 git {
                   remote {
-                        github("denizzzzp/dev-deay2", 'https')
+                        github("denizzzzp/R1", 'https')
                         branch("master")
                   }
               }
         }
-        scriptPath("DAY4-DZ/Jenkinsfile")
+        scriptPath("Jenkinsfile")
       }
 
     }
